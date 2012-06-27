@@ -2,7 +2,7 @@
 
 from distutils.core import setup
 
-setup(name='sql_server.pyodbc',
+setup(name='reuters-django-pyodbc',
       version='1.0',
       description='Django MS SQL Server backends using pyodbc',
       author='django-pyodbc team',
