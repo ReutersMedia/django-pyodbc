@@ -86,7 +86,7 @@ class DatabaseWrapper(BaseDatabaseWrapper):
     _DJANGO_VERSION = _DJANGO_VERSION
 
     drv_name = None
-    driver_needs_utf8 = True 
+    driver_needs_utf8 = None
     MARS_Connection = False
     unicode_results = False
     datefirst = 7
@@ -248,7 +248,7 @@ class DatabaseWrapper(BaseDatabaseWrapper):
                 self.features.can_return_id_from_insert = False
 
             if self.driver_needs_utf8 is None:
-                self.driver_needs_utf8 = False 
+                self.driver_needs_utf8 = True
                 self.drv_name = self.connection.getinfo(Database.SQL_DRIVER_NAME).upper()
                 if self.drv_name in ('SQLSRV32.DLL', 'SQLNCLI.DLL', 'SQLNCLI10.DLL'):
                     self.driver_needs_utf8 = False
