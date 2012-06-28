@@ -8,3 +8,5 @@ Thumbs.db
 *.egg-info
 
 tests/local_settings.py
+/.project
+/.pydevproject
